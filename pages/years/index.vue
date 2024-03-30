@@ -30,9 +30,9 @@ ul:nth-child(5n+3){
 ul:nth-child(5n+4){
     background-color: var(--prussian-blue);
 }
-ul:nth-child(5n+4) li a{
-
+ul:nth-child(5n+3) li a, ul:nth-child(5n+4) li a, ul:nth-child(5n+2) li a{
     color:white;
 }
+
 
 </style>
