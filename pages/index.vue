@@ -17,8 +17,6 @@
 <script setup>
     // const { data } = await useFetch('https://cssday.nl/data.json')
     
-    // ik wil heel graag voor elke data een details pagina maken met alle inhoud van dat jaar.
-    // het lukt nog niet echt om het jaartal uit de date te halen.
 </script>
 
 <style>

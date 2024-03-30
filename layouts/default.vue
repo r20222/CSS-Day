@@ -1,5 +1,5 @@
 <template>
-    <h1>CSS DAY</h1>
+    <NuxtLink to="/">CSS DAY</NuxtLink>
 
     <ul>
         <NuxtLink to="/years">Years</NuxtLink>
@@ -11,5 +11,15 @@
 </template>
 
 <script setup>
-    const { data } = await useFetch('https://cssday.nl/data.json')
+
 </script>
+
+<style>
+    :root{
+        --pale-purple: #E8D7F1;
+        --thistle: #D3BCCC;
+        --pomp-and-power: #A167A5;
+        --tekhelet: #4A306D;
+        --prussian-blue: #0E273C;
+    }
+</style>
