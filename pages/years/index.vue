@@ -1,7 +1,8 @@
 <template>
-    <p>{{ $route.params.id }}</p>
-    <pre>{{ data[$route.params.id].title }}</pre>
-
+      <!-- Link voor elk jaar -->
+      <nav v-for="year in Object.keys(data)" >
+        <NuxtLink :to="`/years/${year}`">{{ year }}</NuxtLink>
+    </nav>
 </template>
 
 <script setup>

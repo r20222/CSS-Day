@@ -1,10 +1,12 @@
 <template>
-    <h1>holaaa</h1>
+    <h1>CSS DAY</h1>
 
-    <!-- Link voor elk jaar -->
-    <nav v-for="year in Object.keys(data)">
-        <NuxtLink :to="`/years/${year}`">{{ year }}</NuxtLink>
-    </nav>
+    <ul>
+        <NuxtLink to="/years">Years</NuxtLink>
+        <NuxtLink to="/speakers">Speakers</NuxtLink>
+        <NuxtLink to="/talks">Talks</NuxtLink>
+    </ul>
+  
     <slot />
 </template>
 
