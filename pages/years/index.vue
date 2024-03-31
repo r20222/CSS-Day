@@ -1,6 +1,6 @@
 <template>
-    <ul v-for="year in Object.keys(data)" >
-        <li>
+    <ul>
+        <li v-for="year in Object.keys(data)" >
             <AtomsButtonLink :year="year" />
         </li>
     </ul>
@@ -14,25 +14,37 @@
 ul{
     padding:0;
     list-style: none;
+    display:grid;
+    grid-template-columns: repeat(2, calc(50% - .5rem));
+    grid-gap:1rem;
+    margin:1rem;
 }
-ul:nth-child(5n){
+li{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius:1rem;
+    font-size:1.5rem;
+}
+li:nth-child(5n){
     background-color: var(--pale-purple);
 }
-ul:nth-child(5n+1){
+li:nth-child(5n+1){
     background-color: var(--thistle);
 }
-ul:nth-child(5n+2){
+li:nth-child(5n+2){
     background-color: var(--pomp-and-power);
 }
-ul:nth-child(5n+3){
+li:nth-child(5n+3){
     background-color: var(--tekhelet);
 }
-ul:nth-child(5n+4){
+li:nth-child(5n+4){
     background-color: var(--prussian-blue);
 }
-ul:nth-child(5n+3) li a, ul:nth-child(5n+4) li a, ul:nth-child(5n+2) li a{
+li:nth-child(5n+3) a, li:nth-child(5n+4) a, li:nth-child(5n+2) a{
     color:white;
 }
+
 
 
 </style>

@@ -1,5 +1,8 @@
 <template>
-    <h1>hello</h1>
+    <section class="introduction">
+        <h1>hello</h1>
+    </section>
+    
     <!-- yaartallen ophalen -->
     <!-- <pre v-for="year in Object.keys(data)">{{ year }}</pre> -->
 
@@ -20,4 +23,7 @@
 </script>
 
 <style>
+    .introduction{
+        margin:1rem;
+    }
 </style>
