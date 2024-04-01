@@ -9,7 +9,7 @@
 
     <!-- speaker carousel -->
     <h2>Speakers</h2>
-    <section class="speaker-carousel">
+    <section class="speaker-carousel" :class="data[$route.params.id].color.name">
         <button  v-for="speaker in data[$route.params.id].speakers" :popovertarget="speaker.name">
             <h3>{{ speaker.name }}</h3>
             
@@ -20,6 +20,7 @@
         </button>
     </section>
 
+    <!-- popover -->
     <section class="popover" v-for="speaker in data[$route.params.id].speakers" :id="speaker.name" popover="auto">
         <button :popovertarget="speaker.name" popovertargetaction="hide">
             <span aria-hidden=”true”>❌</span>
@@ -42,6 +43,7 @@
 <style scoped>
     .year-intro{
         margin:1rem;
+        margin-top: 3rem;
     }
     .year-intro p{
         margin:0;
@@ -51,6 +53,8 @@
         display: flex;
         overflow-x:scroll;
         padding-left:1rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
     }
     .speaker-carousel img{
         border-radius: 1rem;
@@ -58,8 +62,13 @@
     .speaker-carousel button{
         margin-right:1rem;
         font-family: "Black Ops One", system-ui;
+        display: flex;
+        flex-direction: column;
+        border:none;
+        border-radius:1rem;
     }
     h2{
+        margin-top:3rem;
         margin-left:1rem;
     }
     h3{
@@ -75,5 +84,37 @@
     }
     a{
         display:block;
+    }
+
+    /* colors */
+    .red{
+        background-color: #ff0000;
+    }
+    .navy{
+        background-color: #000080;
+    }
+    .olivedrab{
+        background-color: #6b8e23;
+    }
+    .hotpink{
+        background-color: #ff69b4;
+    }
+    .goldenrod{
+        background-color: #daa520;
+    }
+    .tomato{
+        background-color: #ff6347;
+    }
+    .deepskyblue{
+        background-color: #00bfff;
+    }
+    .mediumseagreen{
+        background-color: #3cb371;
+    }
+    .darkorchid{
+        background-color: #9932cc;
+    }
+    .peru{
+        background-color: #cd853f;
     }
 </style>

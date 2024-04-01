@@ -1,13 +1,18 @@
 <template>
-    <nav v-for="talk in data">
-      <NuxtLink :to="`/speakers/${talk}`">{{ talk.title }}</NuxtLink>
-    </nav>
+  <ul class="ul-styling-buttons">
+    <li class="li-styling-buttons" v-for="talk in data">
+      <NuxtLink v-if="talk.title" :to="`/speakers/${talk}`" class="link-style-buttons">{{ talk.title }}</NuxtLink>
+    </li>
+  </ul>
 </template>
 
 <script setup>
-
   const { data } = await useFetch('https://cssday.nl/data/talks.json')
-  // haal hiermee de slug op
-  // const route = useRoute();
-  // console.log(route.params.id)
 </script>
+
+<style scoped>
+a{
+  display: flex;
+  justify-content: start;
+}
+</style>

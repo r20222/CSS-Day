@@ -1,15 +1,18 @@
 <template>
-  <div>
-    <nav v-for="speaker in data">
-      <NuxtLink :to="`/speakers/${speaker}`">{{ speaker.name }}</NuxtLink>
-    </nav>
-  </div> 
+  <ul class="ul-styling-buttons">
+    <li class="li-styling-buttons" v-for="speaker in data">
+      <NuxtLink :to="`/speakers/${speaker}`" class="link-style-buttons">{{ speaker.name }}</NuxtLink>
+    </li>
+  </ul> 
 </template>
 
 <script setup>
-
   const { data } = await useFetch('https://cssday.nl/data/speakers.json')
-  // haal hiermee de slug op
-  // const route = useRoute();
-  // console.log(route.params.id)
 </script>
+
+<style scoped>
+a{
+  display: flex;
+  justify-content: start;
+}
+</style>
