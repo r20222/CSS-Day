@@ -1,7 +1,8 @@
 <template>
-    <NuxtLink to="/" class="css-day-homelink">CSS DAY</NuxtLink>
+    
 
     <nav>
+        <NuxtLink to="/" class="css-day-homelink">CSS Day</NuxtLink>
         <ul>
             <NuxtLink to="/years">Years</NuxtLink>
             <NuxtLink to="/speakers">Speakers</NuxtLink>
@@ -37,6 +38,9 @@
         padding:0;
         margin:0;
     }
+    nav{
+        margin-top:1rem;
+    }
     nav ul{
         padding:0;
     }
@@ -46,6 +50,7 @@
     }
     .css-day-homelink{
         margin:1rem;
+        font-size:3rem;
     }
     .router-link-active {
         color:hotpink;
