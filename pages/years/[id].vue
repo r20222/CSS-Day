@@ -1,6 +1,6 @@
 <template>
     <section class="year-intro">
-        <NuxtLink :to="data[$route.params.id].link"><h1>{{ data[$route.params.id].title }}</h1></NuxtLink>
+        <NuxtLink :to="data[$route.params.id].link" :class="data[$route.params.id].color.name"><h1>{{ data[$route.params.id].title }}</h1></NuxtLink>
         <p v-for="day in data[$route.params.id].date">{{ day }}</p>
         <p>Venue: {{ data[$route.params.id].venue }}</p>
         <p v-if="data[$route.params.id].mc" v-for="mc in data[$route.params.id].mc">MC: {{ mc.name }}</p>
@@ -9,7 +9,7 @@
 
     <!-- speaker carousel -->
     <h2>Speakers</h2>
-    <section class="speaker-carousel" :class="data[$route.params.id].color.name">
+    <section class="speaker-carousel">
         <button  v-for="speaker in data[$route.params.id].speakers" :popovertarget="speaker.name">
             <h3>{{ speaker.name }}</h3>
             
@@ -22,10 +22,13 @@
 
     <!-- popover -->
     <section class="popover" v-for="speaker in data[$route.params.id].speakers" :id="speaker.name" popover="auto">
-        <button :popovertarget="speaker.name" popovertargetaction="hide">
-            <span aria-hidden=”true”>❌</span>
-            <span>Close</span>
-        </button>
+        <section class="popover-close-button-container">
+            <button :popovertarget="speaker.name" popovertargetaction="hide">
+                <span aria-hidden=”true”>&#10540;</span>
+                <span>Close</span>
+            </button>
+        </section>
+       
         <h3>{{speaker.name}}</h3>
         <p v-if="speaker.country">{{  speaker.country }}</p>
         <p>{{ speaker.talk.title }}</p>
@@ -77,44 +80,81 @@
     .popover{
         margin:1rem;
         width:calc(100% - 3rem);
+        height:92%;
+        background-color: var(--thistle);
+        border-radius:1rem;
+        border:none;
+    }
+    .popover h3, .popover p, .popover a{
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .popover-description{
         height:15rem;
         overflow:scroll;
+        background-color: var(--pale-purple);
+    }
+    .popover-close-button-container{
+        width:100%;
+        display:flex;
+        justify-content: end;
+    }
+    .popover button{
+        border-radius: 1rem;
+        padding:.5rem 1rem;
+        background-color: var(--prussian-blue);
+        color: white;
+        font-size:1.5rem;
+        border:none;
+        margin:1rem;
     }
     a{
         display:block;
     }
+    .popover a{
+        color:darkslategray;
+        text-decoration-color: var(--prussian-blue);
+    }
 
     /* colors */
     .red{
-        background-color: #ff0000;
+        color: #ff0000;
+        -webkit-text-stroke: .01px white;
     }
     .navy{
-        background-color: #000080;
+        color: #000080;
+        -webkit-text-stroke: .01px white;
     }
     .olivedrab{
-        background-color: #6b8e23;
+        color: #6b8e23;
+        -webkit-text-stroke: .01px white;
     }
     .hotpink{
-        background-color: #ff69b4;
+        color: #ff69b4;
+        -webkit-text-stroke: .01px white;
     }
     .goldenrod{
-        background-color: #daa520;
+        color: #daa520;
+        -webkit-text-stroke: .01px white;
     }
     .tomato{
-        background-color: #ff6347;
+        color: #ff6347;
+        -webkit-text-stroke: .01px white;
     }
     .deepskyblue{
-        background-color: #00bfff;
+        color: #00bfff;
+        -webkit-text-stroke: .01px white;
     }
     .mediumseagreen{
-        background-color: #3cb371;
+        color: #3cb371;
+        -webkit-text-stroke: .01px white;
     }
     .darkorchid{
-        background-color: #9932cc;
+        color: #9932cc;
+        -webkit-text-stroke: .01px white;
     }
     .peru{
-        background-color: #cd853f;
+        color: #cd853f;
+        -webkit-text-stroke: .01px white;
     }
 </style>
