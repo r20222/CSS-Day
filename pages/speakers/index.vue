@@ -1,7 +1,7 @@
 <template>
   <ul class="ul-styling-buttons">
     <li class="li-styling-buttons" v-for="speaker in data">
-      <NuxtLink :to="`/speakers/${speaker}`" class="link-style-buttons">{{ speaker.name }}</NuxtLink>
+      <NuxtLink :to="`/speakers/${speaker.name}`"  class="link-style-buttons">{{ speaker.name }}</NuxtLink>
     </li>
   </ul> 
 </template>
