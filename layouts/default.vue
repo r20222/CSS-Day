@@ -92,5 +92,4 @@
     .li-styling-buttons:nth-child(5n+3) a, .li-styling-buttons:nth-child(5n+4) a, .li-styling-buttons:nth-child(5n+2) a{
         color:white;
     }
-
 </style>
