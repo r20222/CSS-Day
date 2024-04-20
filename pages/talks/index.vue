@@ -1,7 +1,7 @@
 <template>
   <ul class="ul-styling-buttons">
     <li class="li-styling-buttons" v-for="talk in data">
-      <NuxtLink v-if="talk.title" :to="`/speakers/${talk}`" class="link-style-buttons">{{ talk.title }}</NuxtLink>
+      <NuxtLink v-if="talk.title" :to="`/talks/${talk.title}`" class="link-style-buttons">{{ talk.title }}</NuxtLink>
     </li>
   </ul>
 </template>
