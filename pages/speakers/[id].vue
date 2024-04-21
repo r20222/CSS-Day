@@ -4,7 +4,7 @@
     <h1 v-if="dataObject.name === $route.params.id">{{ dataObject.name }}</h1>
 
     <!-- deze code haalt alle data op die in het object staan waarbij de naam waarde overeenkomt met de waarde uit de slug -->
-    <section class="speaker-section" v-if="dataObject.name === $route.params.id">
+    <section class="info-section" v-if="dataObject.name === $route.params.id">
         <!-- speaker avatar -->
         <img alt="" :src="dataObject.avatar">
 
@@ -17,7 +17,7 @@
         <p>Venue: {{ dataObject.edition.venue }}</p>
 
         <!-- title & description of presentation -->
-        <p v-if="dataObject.talk.title">{{ dataObject.talk.title }}</p>
+        <h2 v-if="dataObject.talk.title">{{ dataObject.talk.title }}</h2>
         <p v-if="dataObject.talk.description">{{ dataObject.talk.description }}</p>
 
         <!-- link to slides & youtube presentation video -->
@@ -33,20 +33,10 @@
 
 <style scoped>
 h1{
-  margin:2rem 1rem .5rem;
+  margin-left: 1rem;
 }
-.dates{
-  line-height: 0;
+img{
+  border-radius: 1rem;
 }
-.speaker-links{
-  color:hotpink;
-  display: block;
-}
-.speaker-section{
-  padding: 0 1rem;
-  margin-bottom:3rem;
-}
-.speaker-section img{
-  width:100%;
-}
+
 </style>

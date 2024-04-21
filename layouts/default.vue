@@ -92,4 +92,19 @@
     .li-styling-buttons:nth-child(5n+3) a, .li-styling-buttons:nth-child(5n+4) a, .li-styling-buttons:nth-child(5n+2) a{
         color:white;
     }
+
+    .speaker-links{
+        color:hotpink;
+        display: block;
+    }
+    .dates{
+        line-height: 0;
+    }
+    .info-section{
+  padding: 0 1rem;
+  margin-bottom:3rem;
+}
+.info-section img{
+  width:100%;
+}
 </style>
