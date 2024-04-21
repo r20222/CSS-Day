@@ -18,7 +18,4 @@ ul{
     grid-template-columns: repeat(2, calc(50% - .5rem));
     grid-gap: 0 1rem;
 }
-
-
-
 </style>

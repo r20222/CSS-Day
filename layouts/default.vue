@@ -93,18 +93,56 @@
         color:white;
     }
 
+    /* colors */
+    .red{
+        color: #ff0000;
+        -webkit-text-stroke: .01px white;
+    }
+    .navy{
+        color: #000080;
+        -webkit-text-stroke: .01px white;
+    }
+    .olivedrab{
+        color: #6b8e23;
+        -webkit-text-stroke: .01px white;
+    }
+    .hotpink{
+        color: #ff69b4;
+        -webkit-text-stroke: .01px white;
+    }
+    .goldenrod{
+        color: #daa520;
+        -webkit-text-stroke: .01px white;
+    }
+    .tomato{
+        color: #ff6347;
+        -webkit-text-stroke: .01px white;
+    }
+    .deepskyblue{
+        color: #00bfff;
+        -webkit-text-stroke: .01px white;
+    }
+    .mediumseagreen{
+        color: #3cb371;
+        -webkit-text-stroke: .01px white;
+    }
+    .darkorchid{
+        color: #9932cc;
+        -webkit-text-stroke: .01px white;
+    }
+    .peru{
+        color: #cd853f;
+        -webkit-text-stroke: .01px white;
+    }
     .speaker-links{
-        color:hotpink;
+        color:white;
         display: block;
     }
-    .dates{
-        line-height: 0;
-    }
     .info-section{
-  padding: 0 1rem;
-  margin-bottom:3rem;
-}
-.info-section img{
-  width:100%;
-}
+        padding: 0 1rem;
+        margin-bottom:3rem;
+    }
+    .info-section img{
+        width:100%; 
+    }
 </style>
