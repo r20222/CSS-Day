@@ -10,31 +10,14 @@
     <!-- speaker carousel -->
     <h2>Speakers</h2>
     <section class="speaker-carousel">
-        <button  v-for="speaker in data[$route.params.id].speakers" :popovertarget="speaker.name">
-            <h3>{{ speaker.name }}</h3>
+        <button  v-for="speaker in data[$route.params.id].speakers">
+            <NuxtLink :to="`/speakers/${speaker.name}`" class="carousel-link">{{ speaker.name }}</NuxtLink>
             
             <img v-if="speaker.avatar" :src="speaker.avatar" :alt="speaker.name" width="200" height="200">
             <img v-else src="/public/css-day.png" alt="no-avatar" width="200" height="200">
 
-            <p v-if="speaker.talk.title">{{ speaker.talk.title }}</p>
+            <NuxtLink :to="`/talks/${speaker.talk.title}`" v-if="speaker.talk.title" class="carousel-link">{{ speaker.talk.title }}</NuxtLink>
         </button>
-    </section>
-
-    <!-- popover -->
-    <section class="popover" v-for="speaker in data[$route.params.id].speakers" :id="speaker.name" popover="auto">
-        <section class="popover-close-button-container">
-            <button :popovertarget="speaker.name" popovertargetaction="hide">
-                <span aria-hidden=”true”>&#10540;</span>
-                <span>Close</span>
-            </button>
-        </section>
-       
-        <h3>{{speaker.name}}</h3>
-        <p v-if="speaker.country">{{  speaker.country }}</p>
-        <p>{{ speaker.talk.title }}</p>
-        <NuxtLink v-if="speaker.talk.slides" :to="speaker.talk.slides" target="_blank">Presentation slides</NuxtLink>
-        <NuxtLink v-if="speaker.talk.video['youtube-link']" :to="speaker.talk.video['youtube-link']" target="_blank">Presentation Video</NuxtLink>
-        <p class="popover-description" v-if="speaker.talk.description">{{ speaker.talk.description }}</p>
     </section>
 
 </template>
@@ -56,7 +39,6 @@
         display: flex;
         overflow-x:scroll;
         padding-left:1rem;
-        padding-top:2rem;
         padding-bottom:2rem;
     }
     .speaker-carousel img{
@@ -74,48 +56,13 @@
         margin-top:3rem;
         margin-left:1rem;
     }
-    h3{
-        height:46.4px
+    .carousel-link{
+        font-size:1rem;
+        text-align: left;
+        margin: 1rem 0;
+        color:black;
+        text-decoration: underline hotpink;
     }
-    .popover{
-        margin:1rem;
-        width:calc(100% - 3rem);
-        height:92%;
-        background-color: var(--thistle);
-        border-radius:1rem;
-        border:none;
-    }
-    .popover h3, .popover p, .popover a{
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .popover-description{
-        height:15rem;
-        overflow:scroll;
-        background-color: var(--pale-purple);
-    }
-    .popover-close-button-container{
-        width:100%;
-        display:flex;
-        justify-content: end;
-    }
-    .popover button{
-        border-radius: 1rem;
-        padding:.5rem 1rem;
-        background-color: var(--prussian-blue);
-        color: white;
-        font-size:1.5rem;
-        border:none;
-        margin:1rem;
-    }
-    a{
-        display:block;
-    }
-    .popover a{
-        color:darkslategray;
-        text-decoration-color: var(--prussian-blue);
-    }
-
     /* colors */
     .red{
         color: #ff0000;
