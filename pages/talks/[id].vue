@@ -13,9 +13,12 @@
       </section>
 
       <article>
+        <!-- speaker name -->
         <section v-for="item in dataObject.speaker">
           <h2 :class="dataObject.edition.color.name">Speaker:</h2>
-          <p>{{ item.name }}</p>
+          <NuxtLink :to="`/speakers/${item.name}`" class="speaker-links">{{
+            item.name
+          }}</NuxtLink>
         </section>
 
         <!-- edition -->
