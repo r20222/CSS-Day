@@ -12,7 +12,7 @@
 
 <style scoped>
 ul{
-    padding:0;
+    padding: 2rem 1rem 1rem;
     list-style: none;
     display:grid;
     grid-template-columns: repeat(2, calc(50% - .5rem));
