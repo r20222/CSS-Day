@@ -9,7 +9,11 @@
   </nav>
   <slot />
 
-  <footer>💖 R20222</footer>
+  <footer>
+    <a class="github-link" href="https://github.com/r20222" target="_blank"
+      >💖 R20222</a
+    >
+  </footer>
 </template>
 
 <script setup></script>
@@ -160,14 +164,17 @@ footer {
   max-width: 70rem;
   margin: auto;
 }
+.github-link {
+  color: white;
+}
 
 /* bigger screens */
 @media screen and (min-width: 43.75em) {
   h1 {
     max-width: 70rem;
     margin: 2rem auto 2rem;
-    padding-left: 1rem;
-    padding-top: 2rem;
+    padding-left: 0;
+    padding-top: 0;
   }
   .info-section {
     max-width: 70rem;
