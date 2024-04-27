@@ -153,7 +153,7 @@ nav a {
   width: 100%;
 }
 footer {
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
   padding-left: 1rem;
 }
@@ -163,6 +163,8 @@ nav,
 footer {
   max-width: 70rem;
   margin: auto;
+  position: relative;
+  bottom: 0;
 }
 .github-link {
   color: white;
