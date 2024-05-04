@@ -1,75 +1,17 @@
-# Nuxt 3 Minimal Starter
+# CSS Day 💻
+![image](https://github.com/r20222/CSS-Day/assets/101579892/72fe3ef3-6982-4b8f-848f-dfa7dbb68e35)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# About the project 🎨
 
-## Setup
+My teacher Krijn, from my study Frontend Design & Development at the University of Applied Sciences in Amsterdam, gave us the assignment to make a website with the JSON data from the CSS day of the past 10 years. With this assignment we could win a ticket for the CSS Day 2024! And Im very excited and happy that I have won a ticket with my project and that I will be attending CSS Day 2024! 🥳
 
-Make sure to install the dependencies:
+# Tech Stack 🛠️
 
-```bash
-# npm
-npm install
+* CSS
+* HTML
+* JavaScript
+* Nuxt
 
-# pnpm
-pnpm install
+# Resources 🚀
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* https://cssday.nl/data
