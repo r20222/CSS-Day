@@ -15,3 +15,4 @@ My teacher Krijn, from my study Frontend Design & Development at the University 
 # Resources 🚀
 
 * https://cssday.nl/data
+* https://cssday.nl/2024
